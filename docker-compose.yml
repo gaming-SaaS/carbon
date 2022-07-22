@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  api:
+    container_name: carbon-groups-api
+    build:
+      context: ./
+      target: production
+    image: carbon-groups-api
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - './:/src'
